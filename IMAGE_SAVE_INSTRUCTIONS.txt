@@ -1,0 +1,39 @@
+SAVE IMAGES - SIMPLE INSTRUCTIONS
+==================================
+
+I can see both images you provided in the chat. Here's how to save them:
+
+METHOD 1 - Save from Chat (EASIEST):
+-------------------------------------
+1. Scroll up in this chat to see the two images
+2. RIGHT-CLICK on the LOGO image (the one with the university seal and Chinese text)
+3. Select "Save Image As..."
+4. Navigate to: C:\Users\afroz\CodeBuddy\20251125214834\client\public\assets
+5. Save it as: logo.png
+
+6. RIGHT-CLICK on the BUILDING image (campus photo with water)
+7. Select "Save Image As..."
+8. Navigate to: C:\Users\afroz\CodeBuddy\20251125214834\client\public\assets
+9. Save it as: portal-bg.jpg
+
+10. Refresh your browser (Ctrl + F5)
+
+
+METHOD 2 - Using PowerShell:
+-----------------------------
+If the images are saved in your Downloads folder, run:
+
+cd C:\Users\afroz\CodeBuddy\20251125214834\client\public\assets
+
+Then manually copy the files there and rename them to:
+- logo.png
+- portal-bg.jpg
+
+
+VERIFY:
+-------
+After saving, this folder should contain:
+C:\Users\afroz\CodeBuddy\20251125214834\client\public\assets\logo.png
+C:\Users\afroz\CodeBuddy\20251125214834\client\public\assets\portal-bg.jpg
+
+Then refresh your browser and the images should appear!

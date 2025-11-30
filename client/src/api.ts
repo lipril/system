@@ -1,12 +1,12 @@
 const API = import.meta.env.PROD 
-  ? (import.meta.env.VITE_API_URL || 'http://localhost:3000/api')
+  ? (import.meta.env.VITE_API_URL || '/api')
   : 'http://localhost:3000/api';
 
-export const loginId = (id: string, pw: string) =>
-  fetch(`${API}/login-id`, {
+export const loginId = (id: string, pw: string, role: 'admin' | 'teacher' | 'student') =>
+  fetch(`${API}/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ id, password: pw }),
+    body: JSON.stringify({ id, password: pw, role }),
   }).then(r => r.json());
 
 export const startReg = (id: string) =>
@@ -29,7 +29,7 @@ export const finishAuth = (studentId: string, cred: any) =>
     body: JSON.stringify({ studentId, cred }),
   }).then(r => r.json());
 
-export const getDashboard = (id: string) => fetch(`${API}/dashboard/${id}`).then(r => r.json());
+export const getDashboard = (id: string) => fetch(`${API}/student/dashboard/${id}`).then(r => r.json());
 
 export const markAttendance = (studentId: string, courseId: string, method: 'webauthn' | 'id') =>
   fetch(`${API}/attendance`, {

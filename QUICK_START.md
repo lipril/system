@@ -1,152 +1,176 @@
-# Quick Start Guide - 5 Minutes to Running
+# Quick Start Guide - NCWU University Management System
 
-This guide gets you up and running in 5 minutes.
+## 🎯 Final Steps Before Running
 
-## Prerequisites Check
+### Step 1: Save the Images (REQUIRED)
 
-Do you have Node.js installed? Open PowerShell and run:
-```powershell
-node --version
-```
+You provided two images that need to be saved:
 
-- ✅ If you see a version number (e.g., v20.x.x), skip to [Step 2](#step-2-install-dependencies)
-- ❌ If you see an error, continue to Step 1
+1. **picture1** → Save as `client/public/assets/logo.png`
+2. **portal-background** → Save as `client/public/assets/portal-background.jpg`
 
----
+**How to save**:
+- Right-click each image
+- "Save As..."
+- Navigate to: `c:/Users/afroz/CodeBuddy/20251125214834/client/public/assets/`
+- Use the exact filenames above
 
-## Step 1: Install Node.js (2 minutes)
+### Step 2: Install Dependencies
 
-1. **Download**: Go to https://nodejs.org/
-2. **Click**: Download the LTS version (left button)
-3. **Install**: Run the installer, click "Next" through all prompts
-4. **Verify**: Close and reopen PowerShell, then run:
-   ```powershell
-   node --version
-   npm --version
-   ```
-
----
-
-## Step 2: Install Dependencies (2 minutes)
-
-### Backend
-
-Open PowerShell in your project folder:
+Open PowerShell and run:
 
 ```powershell
+# Navigate to project
 cd c:/Users/afroz/CodeBuddy/20251125214834
+
+# Install backend dependencies
 npm install
-```
 
-Wait for installation to complete (1-2 minutes).
-
-### Frontend
-
-```powershell
+# Install frontend dependencies
 cd client
 npm install
+cd ..
 ```
 
-Wait for installation to complete (1-2 minutes).
+### Step 3: Start the Application
 
----
-
-## Step 3: Start the Servers (1 minute)
-
-### Terminal 1 - Backend
-
+**Terminal 1 - Backend**:
 ```powershell
 cd c:/Users/afroz/CodeBuddy/20251125214834
 npm run dev
 ```
 
-You should see:
-```
-API running at http://localhost:3000
-```
-
-**Keep this terminal open!**
-
-### Terminal 2 - Frontend
-
-Open a **NEW** PowerShell window:
-
+**Terminal 2 - Frontend** (open new terminal):
 ```powershell
 cd c:/Users/afroz/CodeBuddy/20251125214834/client
 npm run dev
 ```
 
-You should see:
-```
-➜  Local:   http://localhost:5173/
-```
+### Step 4: Access the System
 
-**Keep this terminal open too!**
+Open your browser to: **http://localhost:5173**
 
 ---
 
-## Step 4: Open and Use (30 seconds)
+## 🔐 Login Credentials
 
-1. **Open Browser**: http://localhost:5173
+### Admin Account
+- **Email**: `admin@ncwu.edu.cn`
+- **Password**: `admin123`
+- **Can**: Manage students, teachers, courses, routines
 
-2. **Login**:
-   - Student ID: `S12345`
-   - Password: `demo`
-   - Click "Login ID"
+### Teacher Account
+- **Email**: `ada@ncwu.edu.cn`
+- **Password**: `teacher123`
+- **Can**: View students, create assignments, mark attendance, enter grades
 
-3. **Explore**:
-   - View results, assignments, routine
-   - Click "Attend" to record attendance
-   - See your progress
-
-4. **(Optional) Setup Face Login**:
-   - Click "Register Device Auth"
-   - Follow Windows Hello prompt
-   - Use face/fingerprint/PIN
-   - Next time, click "Login Face/Passkey"
+### Student Account
+- **Email**: `afroz@ncwu.edu.cn`
+- **Password**: `demo`
+- **Can**: View courses, assignments, grades, routines
 
 ---
 
-## Done! 🎉
+## ✨ Key Features to Test
 
-Your system is running! Here's what you can do now:
+### As Admin:
+1. ✅ Click "Students" → Add new student (try Grade 1 or Grade 2)
+2. ✅ Click "Edit" on any student → Modify their information
+3. ✅ Click "Teachers" → Add new teacher
+4. ✅ Click "Courses" → Create course and assign to teacher + grade
+5. ✅ Click "Routines" → Upload a class routine photo
 
-- **Add more students**: Edit `src/init.ts`
-- **Add more courses**: Edit `src/init.ts`
-- **Customize UI**: Edit `client/src/App.tsx`
-- **Deploy online**: See `DEPLOYMENT.md`
+### As Teacher:
+1. ✅ View "My Courses" → See assigned courses
+2. ✅ Click "Students" → Filter by grade
+3. ✅ Click "Assignments" → Create new assignment with deadline
+4. ✅ Click "Attendance" → Mark student attendance
+5. ✅ Click "Exam Marks" → Enter student grades
 
----
-
-## Common Issues
-
-### "npm is not recognized"
-→ Install Node.js (Step 1) and restart PowerShell
-
-### "Port 3000 already in use"
-→ Kill other processes: `npx kill-port 3000`
-
-### "Cannot find module"
-→ Run `npm install` again in the correct folder
-
-### Frontend shows blank page
-→ Check browser console (F12) for errors
-→ Ensure backend is running on port 3000
-
-### WebAuthn not working
-→ Make sure you're using Chrome/Edge/Firefox
-→ Windows Hello must be set up in Windows Settings
+### As Student:
+1. ✅ View "Courses" → See enrolled subjects and teachers
+2. ✅ View "Assignments" → See all assignments with deadlines
+3. ✅ View "Results" → Check exam marks and GPA
+4. ✅ View "Routine" → See class schedule
+5. ✅ View "Attendance" → Check attendance records
 
 ---
 
-## Next Steps
+## 🎨 Visual Themes
 
-- Read `README.md` for full documentation
-- Read `DEPLOYMENT.md` to deploy online
-- Customize the demo data in `src/init.ts`
-
-**Need help?** Check the Troubleshooting section in README.md
+- **Admin Dashboard**: Purple/Indigo professional theme
+- **Teacher Dashboard**: Emerald/Teal academic theme
+- **Student Dashboard**: Cyan cyber/futuristic theme
+- **Login Page**: Professional with university branding
 
 ---
 
-**Enjoy your Computerestic Academic System!** 🚀
+## 📱 Responsive Design
+
+The system works on:
+- 💻 Desktop computers
+- 📱 Tablets
+- 📱 Mobile phones
+
+---
+
+## 🆘 Troubleshooting
+
+### Images not showing?
+- Verify images are saved in `client/public/assets/` with correct names
+- Refresh the browser (Ctrl+F5)
+
+### Can't login?
+- Make sure backend is running (Terminal 1)
+- Make sure frontend is running (Terminal 2)
+- Check console for errors
+
+### Port already in use?
+- Backend uses port 3000
+- Frontend uses port 5173
+- Close any other applications using these ports
+
+---
+
+## 📊 System Features
+
+✅ **Student Management**: Add, edit, delete with grade levels  
+✅ **Teacher Management**: Full CRUD operations  
+✅ **Course Management**: Assign teachers to subjects by grade  
+✅ **Assignment System**: Create with deadlines and descriptions  
+✅ **Attendance Tracking**: Mark by course and grade  
+✅ **Exam Results**: Enter marks and calculate GPA  
+✅ **Class Routines**: Upload schedule photos by grade  
+✅ **Modern UI**: Three distinct themes for each role  
+✅ **University Branding**: NCWU logo and name throughout  
+
+---
+
+## 🎓 University Information
+
+**Full Name**: North China University of Water Resources and Electric Power  
+**Short Name**: NCWU  
+**System**: Comprehensive Academic Management Portal  
+
+---
+
+## 📝 Next Steps
+
+After testing the demo accounts:
+
+1. **Add Real Data**: Use admin account to add actual students and teachers
+2. **Create Courses**: Set up real courses with teacher assignments
+3. **Upload Routines**: Add actual class schedules
+4. **Customize**: Modify themes or add features as needed
+
+---
+
+## 🚀 You're All Set!
+
+Everything is ready. Just:
+1. Save the two images
+2. Run `npm install` in both directories
+3. Start both servers
+4. Access http://localhost:5173
+
+**Enjoy your new NCWU University Management System!**
